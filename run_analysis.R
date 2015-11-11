@@ -27,13 +27,25 @@
 ## #  2  - MeansAndStd        - a "tidy" data.table is written to the 
 ## #                            parent environment.  It contains variables
 ## #                            which have mean or std in their names 
-## #                            irrespective of vase
+## #                            irrespective of case.  Verified that all 
+## #                            cases are complete
 ## ###################################################################
-## #  MeanAndStd     - a "tidy" data.table is written to the parent environment
 ## #  MeanAndStd.txt - written using write.table
+##
+## Requirements 3 and 4 were handled during the data consolitation phase 
+## ###################################################################
+## #  5  - Means        - a "tidy" data.table containing on observation 
+## #                      for each activity type and subject. The 
+## #                      measurement varieles are the means of the 
+## #                      observed values for each group.                           cases are complete
+## ###################################################################
+## # meansByActivityAndSubject - written using write.table 
+## 
+
 run_analysis <- function() {
   library(plyr)
   library(data.table)
+  library(dplyr)
   ## set working directory
   setwd("~/jhu_ds_track/3_cleandata")
   setwd("./data/UCI HAR Dataset")
@@ -135,7 +147,10 @@ run_analysis <- function() {
   ##
   ## Requirements 3 and 4 were handled during the data consolitation phase 
   
-  ## 4 - summarization bu each activity and subject
+  ## 5 - summarization by each activity and subject
+  grouped<-group_by(MeanAndStd,ActivityDescription, SubjectNumber) 
+  means<-summarize_each(grouped,funs(mean))
+  write.table(means,file="./meansByActivityAndSubject.txt",row.names=FALSE)
   
   
 }
