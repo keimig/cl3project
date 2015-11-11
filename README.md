@@ -14,7 +14,7 @@
   * Execute project_setup.R to download and extract the data
 
 ## run_analysis.R design
-1.Read, Set Column Names, and Combine Data 
+1. Read, Set Column Names, and Combine Data 
   * data.table activity        - columns (ActivityCode, ActivityDescription)
   * data.table y_train         - columns (ActivityCode, ActivityDescription)
   * data.table y_test          - columns (ActivityCode, ActivityDescription)
