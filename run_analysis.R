@@ -125,7 +125,7 @@ run_analysis <- function() {
   ##
   test<-cbind(y_test, subject_test, x_test)
   train<-cbind(y_train, subject_train,  x_train)
-  HumanActivityRecognition<<-rbind(test,train)
+  HumanActivityRecognition<-rbind(test,train)
   ##
   ## 1i - check that all cases are complete, if not then stop
   
@@ -143,14 +143,14 @@ run_analysis <- function() {
   ## 
   ## MeanAndStd<-HumanActivityRecognition[, .SD, .SDcols=myvars]
   MeanAndStd<-HumanActivityRecognition[, myvars, with=FALSE]
-  write.table(MeanAndStd,file="./MeanAndStd.txt",row.names=FALSE)
+  ## write.table(MeanAndStd,file="./MeanAndStd.txt",row.names=FALSE)
   ##
   ## Requirements 3 and 4 were handled during the data consolitation phase 
   
   ## 5 - summarization by each activity and subject
   grouped<-group_by(MeanAndStd,ActivityDescription, SubjectNumber) 
-  means<-summarize_each(grouped,funs(mean))
-  write.table(means,file="./meansByActivityAndSubject.txt",row.names=FALSE)
+  HumanActivityMeans<-summarize_each(grouped,funs(mean))
+  write.table(HumanActivityMeans,file="./meansByActivityAndSubject.txt",row.names=FALSE)
   
   
 }
