@@ -8,7 +8,7 @@ output:
 ---
 
 ## Project Description
-Short description of the project
+The project involves the analysis and merge of a set of related data from the Human Activity Recognition Using Smartphones Dataset.   
 
 ##Study design and data processing
 
