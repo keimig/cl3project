@@ -32,7 +32,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 ##Creating the tidy datafiles
 
-###Creation of the HumanActivityRecignition tidy data file
+###Creation of the HumanActivityRecognition tidy data file
 
 1. download and unzip the data using the "project_setup.R" script
 2. read activity_labels.txt into data.table and assign column names of ActivityCode and ActivityDescription (6x2)
@@ -53,9 +53,9 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ###Creation of the HumanActivityMeans tidy data file
 
 1. Create vector consisting of ActivityDescription, SubjectNumber, and all columns containing either the string mean or std() (length is 88)
-2. Create MeanAndStd data,table based on vector if columns (10299 x 88)
-3. Group MeanAndStd by ActivityDescription and SubjectNumber (10299 x 88)
-4. Compute means for all columns by ActivityDescription and SubjectNumber (10299 x 88)
+2. Create MeanAndStd data,table based on vector if columns (10299x88)
+3. Group MeanAndStd by ActivityDescription and SubjectNumber (10299x88)
+4. Compute means for all columns by ActivityDescription and SubjectNumber (180x88)
 5. write the data table to meansByActivityAndSubject.txt file
 
 ###Cleaning of the data
