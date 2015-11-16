@@ -8,7 +8,8 @@
   * git pull
   * git add run_analysis.R
   * git add project_setup.R
-  * git add Codebook_Human_Activity.pdf
+  * git add CodeBook.md
+  
 4. Customize project_setup.R
   * Change working directory in line 2
   * Execute project_setup.R to download and extract the data
