@@ -51,11 +51,23 @@ run_analysis <- function() {
   setwd("./data/UCI HAR Dataset")
   filelist<-list.files(".")
   ## 1a - read and rename activity labels in activity_labels.txt file
-  activity_labels<-fread(
+  activityLabels<-fread(
          "./activity_labels.txt",
          data.table=TRUE)
-  setnames(activity_labels,"V1","ActivityCode")
-  setnames(activity_labels,"V2","ActivityDescription")
+  setnames(activityLabels,"V1","activitycode")
+  setnames(activityLabels,"V2","activitydescription")
+  mylevels<-activityLabels$activitydescription
+  activityFactors<-mutate(activityLabels, activity = factor(activitydescription,levels = mylevels))
+  rm (activityLabels)  ## we are finished with this
+  ## activityFactors contents
+  ## activitycode activitydescription           activity
+  ## 1:            1             WALKING            WALKING
+  ## 2:            2    WALKING_UPSTAIRS   WALKING_UPSTAIRS
+  ## 3:            3  WALKING_DOWNSTAIRS WALKING_DOWNSTAIRS
+  ## 4:            4             SITTING            SITTING
+  ## 5:            5            STANDING           STANDING
+  ## 6:            6              LAYING             LAYING
+  
   ##
   ## 1b - read and test and train record activity codes for data vector in the 
   ## train/y_train.txt and test/y_test.txt files
@@ -65,17 +77,16 @@ run_analysis <- function() {
   y_test<-fread(
        "./test/y_test.txt",
         sep="\n",data.table=TRUE)
-  setnames(y_train,"V1","ActivityCode")
-  setnames(y_test,"V1","ActivityCode")
-  ## add an activity column based on ActivityCode and the activity_labels
+  setnames(y_train,"V1","activitycode")
+  setnames(y_test,"V1","activitycode")
+  ## add an activity column based on activitycode and the activityFactors
   for ( i in 1:nrow(y_test) ) {
-    y_test[i,ActivityDescription:=activity_labels[y_test[i,ActivityCode],ActivityDescription]]
+    y_test[i,activity:=activityFactors[y_test[i,activitycode],activity]]
   } 
   for ( i in 1:nrow(y_train) ) {
-    y_train[i,ActivityDescription:=activity_labels[y_train[i,ActivityCode],ActivityDescription]]
+    y_train[i,activity:=activityFactors[y_train[i,activitycode],activity]]
   } 
-  rm (activity_labels)  ## we are finished with this
-  
+    
   ## 1c - read and test and train subject identifiers for data vector in the 
   ## train/y_train.txt and test/y_test.txt files
   subject_train<-fread(
@@ -86,8 +97,8 @@ run_analysis <- function() {
       sep="\n",data.table=TRUE)
   ##
   ## 1c - use setnames function to column name V1 to subject
-  setnames(subject_train,"V1","SubjectNumber")
-  setnames(subject_test,"V1","SubjectNumber") 
+  setnames(subject_train,"V1","subjectnumber")
+  setnames(subject_test,"V1","subjectnumber") 
   ##
   
   ## 1d -read and rename feature labels in feature.txt file
@@ -96,6 +107,7 @@ run_analysis <- function() {
     data.table=TRUE)
   setnames(features,"V1","MeasurementColumn")
   setnames(features,"V2","MeasurementName")
+  ## fix names here ******
   ##
   ## 1e - read test and train data vectors data rows in the 
   ## train/x_train.txt and test/x_test.txt files into a data.tables
@@ -110,7 +122,18 @@ run_analysis <- function() {
         setnames(x_test,paste("V",i,sep=""),features[i,MeasurementName])
         setnames(x_train,paste("V",i,sep=""),features[i,MeasurementName])
   }
-  
+  ## This assigns duplicate names to the data frames.  This may be shown by 
+  ## means of the following call
+  ##    features[duplicated(MeasurementName)]
+  ## this is not an ideal solution for removing duplicate names, nor is it
+  ## strictly necessary as none of the duplicates are standard deviations or 
+  ## means.   This is a rather brute force approach but it works.
+  x_test <- as.data.frame(x_test)   ## convert to data frame
+  x_train <- as.data.frame(x_train) ## 
+  x_test <-x_test[,]                ## to add suffixes to duplicated names
+  x_train <-x_train[,]              ## 
+  x_test <- as.data.table(x_test)   ## back to data table
+  x_train <- as.data.table(x_train) ##
   ##
   ## 1f - now we have the following state:
   ##  subject_test data.table with single column named "SubjectNumber"
@@ -139,7 +162,7 @@ run_analysis <- function() {
   }
   ##
   ## 2 - determine what fields to extract which contain any ocurrance of mean or std().
-  myvars<-c("ActivityDescription","SubjectNumber",grep("mean|std()",features$MeasurementName,ignore.case=TRUE,value=TRUE))
+  myvars<-c("activity","subjectnumber",grep("mean|std()",features$MeasurementName,ignore.case=TRUE,value=TRUE))
   ## 
   ## MeanAndStd<-HumanActivityRecognition[, .SD, .SDcols=myvars]
   MeanAndStd<-HumanActivityRecognition[, myvars, with=FALSE]
@@ -148,7 +171,7 @@ run_analysis <- function() {
   ## Requirements 3 and 4 were handled during the data consolitation phase 
   
   ## 5 - summarization by each activity and subject
-  grouped<-group_by(MeanAndStd,ActivityDescription, SubjectNumber) 
+  grouped<-group_by(MeanAndStd,activity, subjectnumber) 
   HumanActivityMeans<-summarize_each(grouped,funs(mean))
   write.table(HumanActivityMeans,file="./meansByActivityAndSubject.txt",row.names=FALSE)
   

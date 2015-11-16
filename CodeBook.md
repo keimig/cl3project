@@ -66,18 +66,13 @@ The data was already sufficiently clean for our purposes
   This data file contains 86 columns representing the means of the means or standard deviations of the measurements of the named variables.   There are 180 observations and 88 columns in the dataset.
 
 ###Variable 1
-  * Name: ActivityDescription
-  * Type: Character
-  * Values:
-    + STANDING
-    + SITTING
-    + LAYING
-    + WALKING
-    + WALKING_DOWNSTAIRS
-    + WALKING_UPSTAIRS
+  * Name: activity
+  * Type: Factor w/ 6 Levels
+  * Levels: WALKING WALKING_UPSTAIRS WALKING_DOWNSTAIRS SITTING STANDING LAYING 
+  * Values:       1                2                  3       4        5      6
     
 ###Variable 2
-  * Name: SubjectNumber
+  * Name: subjectnumber
   * Type: Integer
   * Value: Subject Identification Number
 
