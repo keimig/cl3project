@@ -43,9 +43,16 @@
 ## 
 
 run_analysis <- function() {
-  library(plyr)
-  library(data.table)
-  library(dplyr)
+  if (!library(plyr,logical.return=TRUE)) {
+     stop("Please install plyr package")
+  }
+  if (!library(data.table,logical.return=TRUE)) {
+     stop("Please install data.table package")   
+  }
+  if (!library(dplyr,logical.return=TRUE)) {
+     stop("Please install dplyr package")     
+  }
+  
   ## set working directory
   setwd("~/jhu_ds_track/3_cleandata")
   setwd("./data/UCI HAR Dataset")
