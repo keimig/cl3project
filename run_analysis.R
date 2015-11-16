@@ -7,11 +7,11 @@
 ## #  project.
 ## #
 ## #  1  - Read, Set Column Names, and Combine Data
-## #  1a - data.table activity        - columns (ActivityCode, ActivityDescription)
-## #  1b - data.table y_train         - columns (ActivityCode, ActivityDescription)
-## #     - data.table y_test          - columns (ActivityCode, ActivityDescription)
-## #  1c - data.table subject_train   - columns (SubjectNumber)
-## #     - data.table subject_test    - columns (SubjectNumber)
+## #  1a - data.table activityFactors - columns (activitycode, activity)
+## #  1b - data.table y_train         - columns (activitycode, activity)
+## #     - data.table y_test          - columns (activitycode, activity)
+## #  1c - data.table subject_train   - columns (subjectnumber)
+## #     - data.table subject_test    - columns (aubjectnumber)
 ## #  1d - data.table features        - columns (MeasurementColumn, MeasurementName)
 ## #  1e - data.table x_train         - columns (561 data columns with names from features applied)
 ## #     - data.table x_text          - columns (561 data columns with names from features applied)
@@ -107,8 +107,12 @@ run_analysis <- function() {
     data.table=TRUE)
   setnames(features,"V1","MeasurementColumn")
   setnames(features,"V2","MeasurementName")
-  ## fix names here ******
-  ##
+  features<-mutate(features,MeasurementName=tolower(MeasurementName))
+  features<-mutate(features,MeasurementName=gsub("-","",MeasurementName))
+  features<-mutate(features,MeasurementName=gsub("\\)","",MeasurementName))
+  features<-mutate(features,MeasurementName=gsub("\\(","",MeasurementName))
+  features<-mutate(features,MeasurementName=gsub("\\.","",MeasurementName))
+  features<-mutate(features,MeasurementName=gsub("\\,","",MeasurementName))
   ## 1e - read test and train data vectors data rows in the 
   ## train/x_train.txt and test/x_test.txt files into a data.tables
     x_test<-fread(
@@ -136,13 +140,13 @@ run_analysis <- function() {
   x_train <- as.data.table(x_train) ##
   ##
   ## 1f - now we have the following state:
-  ##  subject_test data.table with single column named "SubjectNumber"
+  ##  subject_test data.table with single column named "subjectnumber"
   ##  x_test data,tablewith 561 named columns
-  ##  y_test data.table with columns named "ActivityCode" and "ActivityDescription"
+  ##  y_test data.table with columns named "activitycode" and "activity"
   ##   
-  ##  subject_train data frame with single column named "SubjectNumber"
+  ##  subject_train data frame with single column named "subjectnumber"
   ##  x_train data frame with 561 named columns
-  ##  y_train data frame with single columns named "ActivityCode" and "ActivityDescription"
+  ##  y_train data frame with single columns named "activitycode" and "activity"
   ##
   ##  now we combine using cbind and rbind into a single data.table called alldata
   ##
@@ -162,7 +166,7 @@ run_analysis <- function() {
   }
   ##
   ## 2 - determine what fields to extract which contain any ocurrance of mean or std().
-  myvars<-c("activity","subjectnumber",grep("mean|std()",features$MeasurementName,ignore.case=TRUE,value=TRUE))
+  myvars<-c("activity","subjectnumber",grep("mean|std",features$MeasurementName,ignore.case=TRUE,value=TRUE))
   ## 
   ## MeanAndStd<-HumanActivityRecognition[, .SD, .SDcols=myvars]
   MeanAndStd<-HumanActivityRecognition[, myvars, with=FALSE]
