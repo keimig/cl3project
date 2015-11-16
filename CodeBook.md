@@ -13,7 +13,7 @@ The project involves the analysis and merge of a set of related data from the Hu
 ##Study design and data processing
 
 ###Collection of the raw data
-Human Activity Recognition Using Smartphones Dataset is the result of a an experiment involving 30 volunteers of 19-48 years of age.  Each volunteer performed six discrete activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) while a smartphone on their waist.  The phone, a Samsung Galaxy S II, has an internal accelerometer and gyroscope.  Three dimensional acceleration and volocity measurments were taken.  The volunteers were randomly assigned to two groups.   Seventy percent of the volunteers were desiginated as generating training data and the remaining volunteers were designated as generating test data. 
+Human Activity Recognition Using Smartphones Dataset is the result of a an experiment involving 30 volunteers of 19-48 years of age.  Each volunteer performed six discrete activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAyING) while a smartphone on their waist.  The phone, a Samsung Galaxy S II, has an internal accelerometer and gyroscope.  Three dimensional acceleration and volocity measurments were taken.  The volunteers were randomly assigned to two groups.   Seventy percent of the volunteers were desiginated as generating training data and the remaining volunteers were designated as generating test data. 
 
 The data in the training and test datasets represents an intermeiate state of the data.   The sensor have been press processes by applying the following:
   - noise filters
@@ -50,11 +50,11 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 14. use cbind to merge y_test, subject_test, and x_test data tables into test data.table (2847x564)
 15. use rbind to concatenate train and test data tables indo HumanActivityRecognition tidy data table (10299x564)
 
-###Creation of the HumanActivityMeans tidy data file
+###Creation of the HumanActivitymeans tidy data file
 
-1. Create vector consisting of ActivityDescription, SubjectNumber, and all columns containing either the string mean or std() (length is 88)
-2. Create MeanAndStd data,table based on vector if columns (10299x88)
-3. Group MeanAndStd by ActivityDescription and SubjectNumber (10299x88)
+1. Create vector consisting of ActivityDescription, SubjectNumber, and all columns containing either the string mean or std (length is 88)
+2. Create meanAndStd data,table based on vector if columns (10299x88)
+3. Group meanAndStd by ActivityDescription and SubjectNumber (10299x88)
 4. Compute means for all columns by ActivityDescription and SubjectNumber (180x88)
 5. write the data table to meansByActivityAndSubject.txt file
 
@@ -62,13 +62,13 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 The data was already sufficiently clean for our purposes
 
-##Description of the variables in the HumanActivityMeans.txt file
+##Description of the variables in the HumanActivitymeans.txt file
   This data file contains 86 columns representing the means of the means or standard deviations of the measurements of the named variables.   There are 180 observations and 88 columns in the dataset.
 
 ###Variable 1
   * Name: activity
   * Type: Factor w/ 6 Levels
-  * Levels: WALKING WALKING_UPSTAIRS WALKING_DOWNSTAIRS SITTING STANDING LAYING 
+  * Levels: WALKING WALKING_UPSTAIRS WALKING_DOWNSTAIRS SITTING STANDING LAyING 
   * Values:       1                2                  3       4        5      6
     
 ###Variable 2
@@ -77,431 +77,431 @@ The data was already sufficiently clean for our purposes
   * Value: Subject Identification Number
 
 ###Variable 3
-  * Name: tBodyAcc-mean()-X
+  * Name: tbodyaccmeanx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 4
-  * Name: tBodyAcc-mean()-Y
+  * Name: tbodyaccmeany
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 5
-  * Name: tBodyAcc-mean()-Z
+  * Name: tbodyaccmeanz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 6
-  * Name: tBodyAcc-std()-X
+  * Name: tbodyaccstdx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 7
-  * Name: tBodyAcc-std()-Y
+  * Name: tbodyaccstdy
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 8
-  * Name: tBodyAcc-std()-Z
+  * Name: tbodyaccstdz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 9
-  * Name: tGravityAcc-mean()-X
+  * Name: tgravityaccmeanx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 10
-  * Name: tGravityAcc-mean()-Y
+  * Name: tgravityaccmeany
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 11
-  * Name: tGravityAcc-mean()-Z
+  * Name: tgravityaccmeanz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 12
-  * Name: tGravityAcc-std()-X
+  * Name: tgravityaccstdx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 13
-  * Name: tGravityAcc-std()-Y
+  * Name: tgravityaccstdy
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 14
-  * Name: tGravityAcc-std()-Z
+  * Name: tgravityaccstdz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 15
-  * Name: tBodyAccJerk-mean()-X
+  * Name: tbodyaccjerkmeanx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 16
-  * Name: tBodyAccJerk-mean()-Y
+  * Name: tbodyaccjerkmeany
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 17
-  * Name: tBodyAccJerk-mean()-Z
+  * Name: tbodyaccjerkmeanz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 18
-  * Name: tBodyAccJerk-std()-X
+  * Name: tbodyaccjerkstdx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 19
-  * Name: tBodyAccJerk-std()-Y
+  * Name: tbodyaccjerkstdy
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 20
-  * Name: tBodyAccJerk-std()-Z
+  * Name: tbodyaccjerkstdz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 21
-  * Name: tBodyGyro-mean()-X
+  * Name: tbodygyromeanx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 22
-  * Name: tBodyGyro-mean()-Y
+  * Name: tbodygyromeany
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 23
-  * Name: tBodyGyro-mean()-Z
+  * Name: tbodygyromeanz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 24
-  * Name: tBodyGyro-std()-X
+  * Name: tbodygyrostdx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 25
-  * Name: tBodyGyro-std()-Y
+  * Name: tbodygyrostdy
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 26
-  * Name: tBodyGyro-std()-Z
+  * Name: tbodygyrostdz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 27
-  * Name: tBodyGyroJerk-mean()-X
+  * Name: tbodygyrojerkmeanx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 28
-  * Name: tBodyGyroJerk-mean()-Y
+  * Name: tbodygyrojerkmeany
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 29
-  * Name: tBodyGyroJerk-mean()-Z
+  * Name: tbodygyrojerkmeanz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 30
-  * Name: tBodyGyroJerk-std()-X
+  * Name: tbodygyrojerkstdx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 31
-  * Name: tBodyGyroJerk-std()-Y
+  * Name: tbodygyrojerkstdy
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 32
-  * Name: tBodyGyroJerk-std()-Z
+  * Name: tbodygyrojerkstdz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 33
-  * Name: tBodyAccMag-mean()
+  * Name: tbodyaccmagmean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 34
-  * Name: tBodyAccMag-std()
+  * Name: tbodyaccmagstd
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 35
-  * Name: tGravityAccMag-mean()
+  * Name: tgravityaccmagmean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 36
-  * Name: tGravityAccMag-std()
+  * Name: tgravityaccmagstd
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 37
-  * Name: tBodyAccJerkMag-mean()
+  * Name: tbodyaccjerkmagmean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 38
-  * Name: tBodyAccJerkMag-std()
+  * Name: tbodyaccjerkmagstd
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 39
-  * Name: tBodyGyroMag-mean()
+  * Name: tbodygyromagmean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 40
-  * Name: tBodyGyroMag-std()
+  * Name: tbodygyromagstd
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 41
-  * Name: tBodyGyroJerkMag-mean()
+  * Name: tbodygyrojerkmagmean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 42
-  * Name: tBodyGyroJerkMag-std()
+  * Name: tbodygyrojerkmagstd
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 43
-  * Name: fBodyAcc-mean()-X
+  * Name: fbodyaccmeanx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 44
-  * Name: fBodyAcc-mean()-Y
+  * Name: fbodyaccmeany
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 45
-  * Name: fBodyAcc-mean()-Z
+  * Name: fbodyaccmeanz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 46
-  * Name: fBodyAcc-std()-X
+  * Name: fbodyaccstdx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 47
-  * Name: fBodyAcc-std()-Y
+  * Name: fbodyaccstdy
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 48
-  * Name: fBodyAcc-std()-Z
+  * Name: fbodyaccstdz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 49
-  * Name: fBodyAcc-meanFreq()-X
+  * Name: fbodyaccmeanfreqx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 50
-  * Name: fBodyAcc-meanFreq()-Y
+  * Name: fbodyaccmeanfreqy
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 51
-  * Name: fBodyAcc-meanFreq()-Z
+  * Name: fbodyaccmeanfreqz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 52
-  * Name: fBodyAccJerk-mean()-X
+  * Name: fbodyaccjerkmeanx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 53
-  * Name: fBodyAccJerk-mean()-Y
+  * Name: fbodyaccjerkmeany
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 54
-  * Name: fBodyAccJerk-mean()-Z
+  * Name: fbodyaccjerkmeanz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 55
-  * Name: fBodyAccJerk-std()-X
+  * Name: fbodyaccjerkstdx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 56
-  * Name: fBodyAccJerk-std()-Y
+  * Name: fbodyaccjerkstdy
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 57
-  * Name: fBodyAccJerk-std()-Z
+  * Name: fbodyaccjerkstdz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 58
-  * Name: fBodyAccJerk-meanFreq()-X
+  * Name: fbodyaccjerkmeanfreqx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 59
-  * Name: fBodyAccJerk-meanFreq()-Y
+  * Name: fbodyaccjerkmeanfreqy
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 60
-  * Name: fBodyAccJerk-meanFreq()-Z
+  * Name: fbodyaccjerkmeanfreqz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 61
-  * Name: fBodyGyro-mean()-X
+  * Name: fbodygyromeanx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 62
-  * Name: fBodyGyro-mean()-Y
+  * Name: fbodygyromeany
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 63
-  * Name: fBodyGyro-mean()-Z
+  * Name: fbodygyromeanz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 64
-  * Name: fBodyGyro-std()-X
+  * Name: fbodygyrostdx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 65
-  * Name: fBodyGyro-std()-Y
+  * Name: fbodygyrostdy
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 66
-  * Name: fBodyGyro-std()-Z
+  * Name: fbodygyrostdz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 67
-  * Name: fBodyGyro-meanFreq()-X
+  * Name: fbodygyromeanfreqx
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 68
-  * Name: fBodyGyro-meanFreq()-Y
+  * Name: fbodygyromeanfreqy
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 69
-  * Name: fBodyGyro-meanFreq()-Z
+  * Name: fbodygyromeanfreqz
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 70
-  * Name: fBodyAccMag-mean()
+  * Name: fbodyaccmagmean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 71
-  * Name: fBodyAccMag-std()
+  * Name: fbodyaccmagstd
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 72
-  * Name: fBodyAccMag-meanFreq()
+  * Name: fbodyaccmagmeanfreq
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 73
-  * Name: fBodyBodyAccJerkMag-mean()
+  * Name: fbodybodyaccjerkmagmean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 74
-  * Name: fBodyBodyAccJerkMag-std()
+  * Name: fbodybodyaccjerkmagstd
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 75
-  * Name: fBodyBodyAccJerkMag-meanFreq()
+  * Name: fbodybodyaccjerkmagmeanfreq
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 76
-  * Name: fBodyBodyGyroMag-mean()
+  * Name: fbodybodygyromagmean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 77
-  * Name: fBodyBodyGyroMag-std()
+  * Name: fbodybodygyromagstd
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 78
-  * Name: fBodyBodyGyroMag-meanFreq()
+  * Name: fbodybodygyromagmeanfreq
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 79
-  * Name: fBodyBodyGyroJerkMag-mean()
+  * Name: fbodybodygyrojerkmagmean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 80
-  * Name: fBodyBodyGyroJerkMag-std()
+  * Name: fbodybodygyrojerkmagstd
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 81
-  * Name: fBodyBodyGyroJerkMag-meanFreq()
+  * Name: fbodybodygyrojerkmagmeanfreq
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 82
-  * Name: angle(tBodyAccMean,gravity)
+  * Name: angletbodyaccmeangravity
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 83
-  * Name: angle(tBodyAccJerkMean),gravityMean)
+  * Name: angletbodyaccjerkmeangravitymean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 84
-  * Name: angle(tBodyGyroMean,gravityMean)
+  * Name: angletbodygyromeangravitymean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 85
-  * Name: angle(tBodyGyroJerkMean,gravityMean)
+  * Name: angletbodygyrojerkmeangravitymean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 86
-  * Name: angle(X,gravityMean)
+  * Name: anglexgravitymean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 87
-  * Name: angle(Y,gravityMean)
+  * Name: angleygravitymean
   * Type: Double
   * Value: mean of variable by Activity and Subject
 
 ###Variable 88
-  * Name: angle(Z,gravityMean)
+  * Name: anglezgravitymean
   * Type: Double
   * Value: mean of variable by Activity and Subject
