@@ -15,11 +15,11 @@
 
 ## run_analysis.R design
 1. Read, Set Column Names, and Combine Data 
-  * data.table activity        - columns (ActivityCode, ActivityDescription)
-  * data.table y_train         - columns (ActivityCode, ActivityDescription)
-  * data.table y_test          - columns (ActivityCode, ActivityDescription)
-  * data.table subject_train   - columns (SubjectNumber)
-  * data.table subject_test    - columns (SubjectNumber)
+  * data.table activityFactors - columns (activitycode, activity)
+  * data.table y_train         - columns (activitycode, activity)
+  * data.table y_test          - columns (activitycode, activity)
+  * data.table subject_train   - columns (subjectnumber)
+  * data.table subject_test    - columns (subjectnumber)
   * data.table features        - columns (MeasurementColumn, MeasurementName)
   * data.table x_train         - columns (561 data columns with names from features applied)
   * data.table x_text          - columns (561 data columns with names from features applied)
