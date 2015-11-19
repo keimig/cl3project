@@ -60,7 +60,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 ###Cleaning of the data
 
-The data was already sufficiently clean for our purposes
+The data was already sufficiently clean for our purposes.  The features were processed to remove duplicate names and invalid characters from the names.
 
 ##Description of the variables in the HumanActivitymeans.txt file
   This data file contains 86 columns representing the means of the means or standard deviations of the measurements of the named variables.   There are 180 observations and 88 columns in the dataset.
@@ -79,429 +79,601 @@ The data was already sufficiently clean for our purposes
 ###Variable 3
   * Name: tbodyaccmeanx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean body acceleration minus gravity in the x axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 4
   * Name: tbodyaccmeany
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean body acceleration minus gravity in the y axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 5
   * Name: tbodyaccmeanz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean body acceleration minus gravity in the z axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 6
   * Name: tbodyaccstdx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of body acceleration minus gravity in the x axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 7
   * Name: tbodyaccstdy
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of body acceleration minus gravity in the y axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 8
   * Name: tbodyaccstdz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of body acceleration minus gravity in the z axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 9
   * Name: tgravityaccmeanx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean constant value of gravity in the x axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 10
   * Name: tgravityaccmeany
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean constant value of gravity in the y axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 11
   * Name: tgravityaccmeanz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean constant value of gravity in the z axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 12
   * Name: tgravityaccstdx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean standard deviation of constant value of gravity in the x axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 13
   * Name: tgravityaccstdy
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean standard deviation of value of gravity in the y axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 14
   * Name: tgravityaccstdz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean standard deviation of value of gravity in the z axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 15
   * Name: tbodyaccjerkmeanx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean body jerk magniture  minus gravity in the z axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 16
   * Name: tbodyaccjerkmeany
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean body jerk magniture  minus gravity in the y axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 17
   * Name: tbodyaccjerkmeanz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean body jerk magniture  minus gravity in the z axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 18
   * Name: tbodyaccjerkstdx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of body jerk magniture minus gravity in the x axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 19
   * Name: tbodyaccjerkstdy
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of body jerk magniture minus gravity in the y axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 20
   * Name: tbodyaccjerkstdz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of body jerk magniture minus gravity in the z axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 21
   * Name: tbodygyromeanx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of body gyro reading in the x axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 22
   * Name: tbodygyromeany
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of body gyro reading in the y axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 23
   * Name: tbodygyromeanz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of body gyro reading in the z axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 24
   * Name: tbodygyrostdx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of the standard deviation of body gyro reading in the x axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 25
   * Name: tbodygyrostdy
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of the standard deviation of body gyro reading in the y axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 26
   * Name: tbodygyrostdz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of the standard deviation of body gyro reading in the z axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 27
   * Name: tbodygyrojerkmeanx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of body gyro jerk reading in the x axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 28
   * Name: tbodygyrojerkmeany
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of body gyro jerk reading in the y axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 29
   * Name: tbodygyrojerkmeanz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of body gyro jerk reading in the z axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 30
   * Name: tbodygyrojerkstdx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of the standard deviations of the body gyro jerk reading in the x axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 31
   * Name: tbodygyrojerkstdy
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of the standard deviations of the body gyro jerk reading in the y axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 32
   * Name: tbodygyrojerkstdz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of the standard deviations of the body gyro jerk reading in the z axis
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 33
   * Name: tbodyaccmagmean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of body acceleration magnitude 
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 34
   * Name: tbodyaccmagstd
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of body acceleration magnitude 
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 35
   * Name: tgravityaccmagmean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Constant of gravity acceleration magnitude 
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 36
   * Name: tgravityaccmagstd
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of constant of gravity acceleration magnitude     
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 37
   * Name: tbodyaccjerkmagmean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of jerk acceleration magnitude
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 38
   * Name: tbodyaccjerkmagstd
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of jerk acceleration magnitude
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 39
   * Name: tbodygyromagmean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of body gyro magnitude reading 
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 40
   * Name: tbodygyromagstd
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of standard deviation of body gyro magnitude reading 
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 41
   * Name: tbodygyrojerkmagmean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of body gyro jerk magnitude reading 
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 42
   * Name: tbodygyrojerkmagstd
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of standard deviation of body gyro jerk magnitude reading
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 43
   * Name: fbodyaccmeanx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Fast Fourier Transform of tbodyaccx 
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 44
   * Name: fbodyaccmeany
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Fast Fourier Transform of tbodyaccy 
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 45
   * Name: fbodyaccmeanz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Fast Fourier Transform of tbodyaccz
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 46
   * Name: fbodyaccstdx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of Fast Fourier Transform of tbodyaccx
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 47
   * Name: fbodyaccstdy
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g 
+  * Computed: Mean of standard deviation of Fast Fourier Transform of tbodyaccy
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 48
   * Name: fbodyaccstdz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of Fast Fourier Transform of tbodyaccz
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 49
   * Name: fbodyaccmeanfreqx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of frequency components of tbodyaccx
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 50
   * Name: fbodyaccmeanfreqy
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of frequency components of tbodyaccy
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 51
   * Name: fbodyaccmeanfreqz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of frequency components of tbodyaccz
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 52
   * Name: fbodyaccjerkmeanx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of Fast Fourier Transform of tbodyaccjerkx
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 53
   * Name: fbodyaccjerkmeany
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of Fast Fourier Transform of tbodyaccjerky
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 54
   * Name: fbodyaccjerkmeanz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of Fast Fourier Transform of tbodyaccjerkrz
+  * Value: mean of variable able of same name by activity and subject
 
 ###Variable 55
   * Name: fbodyaccjerkstdx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of Fast Fourier Transform of tbodyaccjerkx
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 56
   * Name: fbodyaccjerkstdy
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of Fast Fourier Transform of tbodyaccjerky
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 57
   * Name: fbodyaccjerkstdz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of Fast Fourier Transform of tbodyaccjerkz
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 58
   * Name: fbodyaccjerkmeanfreqx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g 
+  * Computed: Mean of frequency components of tbodyaccjerkx
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 59
   * Name: fbodyaccjerkmeanfreqy
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of frequency components of tbodyaccjerky
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 60
   * Name: fbodyaccjerkmeanfreqz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of frequency components of tbodyaccjerkz
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 61
   * Name: fbodygyromeanx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of Fast Fourier Transform of tbodygyrox
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 62
   * Name: fbodygyromeany
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of Fast Fourier Transform of tbodygyroy
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 63
   * Name: fbodygyromeanz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of Fast Fourier Transform of tbodygyroz
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 64
   * Name: fbodygyrostdx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of standard deviation of Fast Fourier Transform of tbodygyrox
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 65
   * Name: fbodygyrostdy
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of standard deviation of Fast Fourier Transform of tbodygyroy
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 66
   * Name: fbodygyrostdz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of standard deviation of Fast Fourier Transform of tbodygyroz
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 67
   * Name: fbodygyromeanfreqx
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of frequency components of tbodygyrox
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 68
   * Name: fbodygyromeanfreqy
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of frequency components of tbodygyroy
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 69
   * Name: fbodygyromeanfreqz
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of frequency components of tbodygyroz
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 70
   * Name: fbodyaccmagmean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of Fast Fourier Transform of tbodyaccmag
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 71
   * Name: fbodyaccmagstd
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of Fast Fourier Transform of tbodyaccmag
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 72
   * Name: fbodyaccmagmeanfreq
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of frequency components of tbodyaccmag
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 73
   * Name: fbodybodyaccjerkmagmean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of Fast Fourier Transform of tbodybodyaccjerkmag
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 74
   * Name: fbodybodyaccjerkmagstd
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of standard deviation of Fast Fourier Transform of tbodybodyaccjerkmag
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 75
   * Name: fbodybodyaccjerkmagmeanfreq
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: g
+  * Computed: Mean of frequency components of tbodybodyaccjerkmag
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 76
   * Name: fbodybodygyromagmean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of Fast Fourier Transform of tbodybodygyromag
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 77
   * Name: fbodybodygyromagstd
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of standard deviations of Fast Fourier Transform of tbodybodygyromag
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 78
   * Name: fbodybodygyromagmeanfreq
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of frequency components of tbodybodygyromag
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 79
   * Name: fbodybodygyrojerkmagmean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of Fast Fourier Transform of tbodybodygyrojerkmag
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 80
   * Name: fbodybodygyrojerkmagstd
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of standard deviation of Fast Fourier Transform of tbodybodygyrojerkmag
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 81
   * Name: fbodybodygyrojerkmagmeanfreq
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians/sec
+  * Computed: Mean of frequency components of tbodybodygyrojerkmag
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 82
   * Name: angletbodyaccmeangravity
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians
+  * Computed: Mean angle between tbodyacc and gravity force vectors
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 83
   * Name: angletbodyaccjerkmeangravitymean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians
+  * Computed: Mean angle between tbodyaccjerk and gravity force vectors
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 84
   * Name: angletbodygyromeangravitymean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians
+  * Computed: Mean angle between tbodygyro and gravity force vectors
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 85
   * Name: angletbodygyrojerkmeangravitymean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians
+  * Computed: Mean angle between tbodygyrojerk and gravity force vectors
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 86
   * Name: anglexgravitymean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians
+  * Computed: Mean angle between x vector and gravity force vectors
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 87
   * Name: angleygravitymean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians
+  * Computed: Mean angle between y vector and gravity force vectors
+  * Value: mean of variable of same name by activity and subject
 
 ###Variable 88
   * Name: anglezgravitymean
   * Type: Double
-  * Value: mean of variable by Activity and Subject
+  * Units: radians
+  * Computed: Mean angle between z vector and gravity force vectors
+  * Value: mean of variable of same name by activity and subject
