@@ -13,6 +13,7 @@
 4. Customize project_setup.R
   * Change working directory in line 2
   * Execute project_setup.R to download and extract the data
+  * Ensure packages plyr, data.tables, and dplyr are installed 
 
 ## run_analysis.R design
 1. Read, Set Column Names, and Combine Data 
