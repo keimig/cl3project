@@ -15,10 +15,10 @@ The project involves the analysis and merge of a set of related data from the Hu
 ###Collection of the raw data
 Human Activity Recognition Using Smartphones Dataset is the result of a an experiment involving 30 volunteers of 19-48 years of age.  Each volunteer performed six discrete activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) while a smartphone on their waist.  The phone, a Samsung Galaxy S II, has an internal accelerometer and gyroscope.  Three dimensional acceleration and volocity measurments were taken.  The volunteers were randomly assigned to two groups.   Seventy percent of the volunteers were desiginated as generating training data and the remaining volunteers were designated as generating test data. 
 
-The data in the training and test datasets represents an intermediate state of the data.   The sensor have been press processes by applying the following:
+The data in the training and test datasets represents an intermediate state of the data.   The sensor data have been processed by applying the following:
   - noise filters
   - sampled withing a sliding windows of 2.56 sec and 50% overlap (128 readings/window)
-  - gravitational and body motion seperation
+  - gravitational and body motion separation
   - normalization to a relative range [-1,1]
 
 ###Notes on the original (raw) data 
