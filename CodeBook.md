@@ -19,6 +19,7 @@ The data in the training and test datasets represents an intermediate state of t
   - noise filters
   - sampled withing a sliding windows of 2.56 sec and 50% overlap (128 readings/window)
   - gravitational and body motion separation
+  - Fast Fourier Transformations
   - normalization to a relative range [-1,1]
 
 ###Notes on the original (raw) data 
