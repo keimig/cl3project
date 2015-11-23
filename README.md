@@ -44,3 +44,4 @@
   * The measurement varieles are the means of the variables containing mean or std in any form summarized by activity and subject
   * All cases are complete
   * meansByActivityAndSubject.txt - written using write.table 
+  * May be loaded into R by means <- read.table("meansbyActivityAndSubject.txt",header=TRUE)
